@@ -32,7 +32,7 @@ const CustomerFrom = () => {
         let valid;
 
         if (e.target.name === "name") {
-            valid = /^[A-Za-z ]+$/.test(e.target.value);
+            valid = e.target.value.length > 3 && e.target.value.length < 20 && /^[A-Za-z ]+$/.test(e.target.value);
         }
         if (e.target.name === "age") {
             valid = Number(e.target.value) > 1 && Number(e.target.value) < 100;
