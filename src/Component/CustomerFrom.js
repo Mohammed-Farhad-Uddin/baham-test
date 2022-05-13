@@ -28,21 +28,37 @@ const CustomerFrom = () => {
     });
 
 
-    const handleChange = (e) => {
+    const handleBlur = (e) => {
         let valid;
 
         if (e.target.name === "name") {
             valid = e.target.value.length > 3 && e.target.value.length < 30 && /^[A-Za-z ]+$/.test(e.target.value);
+            if (!valid) {
+                alert("correct the input");
+            }
         }
+
         if (e.target.name === "age") {
             valid = Number(e.target.value) > 1 && Number(e.target.value) < 100;
+            if (!valid) {
+                alert("correct the input");
+            }
         }
+
         if (e.target.name === "address") {
             valid = /^[#.0-9a-zA-Z\s,-]+$/.test(e.target.value);
+            if (!valid) {
+                alert("correct the input");
+            }
         }
+
         if (e.target.name === "phone") {
             valid = /(^(\+88|0088)?(01){1}[3456789]{1}(\d){8})$/.test(e.target.value);
+            if (!valid) {
+                alert("correct the input");
+            }
         }
+
         if (valid) {
             let customer = { ...customerForm }
             customer[e.target.name] = e.target.value;
@@ -82,19 +98,19 @@ const CustomerFrom = () => {
                             <form onSubmit={handleCustomerForm}>
                                 <FormControl>
                                     <FormLabel>Full Name</FormLabel>
-                                    <Input onChange={handleChange} name="name" type='text' placeholder='Enter your Name' required />
+                                    <Input onBlur={handleBlur} name="name" type='text' placeholder='Enter your Name' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Age</FormLabel>
-                                    <Input onChange={handleChange} name="age" type='number' placeholder='Enter your Age' required />
+                                    <Input onBlur={handleBlur} name="age" type='number' placeholder='Enter your Age' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Phone</FormLabel>
-                                    <Input onChange={handleChange} name="phone" type='tel' placeholder='Enter your Number' required />
+                                    <Input onBlur={handleBlur} name="phone" type='tel' placeholder='Enter your Number' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Address</FormLabel>
-                                    <Input onChange={handleChange} name="address" type='text' placeholder='Enter your Address' required />
+                                    <Input onBlur={handleBlur} name="address" type='text' placeholder='Enter your Address' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>District</FormLabel>

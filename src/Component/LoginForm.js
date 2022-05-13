@@ -43,9 +43,15 @@ const LoginForm = () => {
         if (e.target.name === "email") {
             const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             valid = emailRegex.test(String(e.target.value).toLowerCase())
+            if (!valid) {
+                alert("correct the input");
+            }
         }
         if (e.target.name === "password") {
             valid = e.target.value.length > 5 && /\d{1}/.test(e.target.value)
+            if (!valid) {
+                alert("correct the input");
+            }
         }
         if (valid) {
             let user = { ...login }
