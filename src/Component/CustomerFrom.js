@@ -53,6 +53,7 @@ const CustomerFrom = () => {
     const handleCustomerForm = (e) => {
         e.preventDefault();
         customerForm.district = district;
+        alert("Submitted")
         // console.log(customerForm);
         axios.post('https://jsonplaceholder.typicode.com/posts', customerForm)
             .then((response) => { console.log(response) })

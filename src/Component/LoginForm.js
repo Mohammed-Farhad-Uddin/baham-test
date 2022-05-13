@@ -29,6 +29,7 @@ const LoginForm = () => {
 
     const handelLogIn = (e) => {
         e.preventDefault();
+        alert("Submitted")
         // console.log(login);
         axios.post('https://jsonplaceholder.typicode.com/posts', login)
             .then((response) => { console.log(response) })
