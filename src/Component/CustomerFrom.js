@@ -28,11 +28,11 @@ const CustomerFrom = () => {
     });
 
 
-    const handleBlur = (e) => {
+    const handleChange = (e) => {
         let valid;
 
         if (e.target.name === "name") {
-            valid = e.target.value.length > 3 && e.target.value.length < 20 && /^[A-Za-z ]+$/.test(e.target.value);
+            valid = e.target.value.length > 3 && e.target.value.length < 30 && /^[A-Za-z ]+$/.test(e.target.value);
         }
         if (e.target.name === "age") {
             valid = Number(e.target.value) > 1 && Number(e.target.value) < 100;
@@ -82,19 +82,19 @@ const CustomerFrom = () => {
                             <form onSubmit={handleCustomerForm}>
                                 <FormControl>
                                     <FormLabel>Full Name</FormLabel>
-                                    <Input onBlur={handleBlur} name="name" type='text' placeholder='Enter your Name' required />
+                                    <Input onChange={handleChange} name="name" type='text' placeholder='Enter your Name' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Age</FormLabel>
-                                    <Input onBlur={handleBlur} name="age" type='number' placeholder='Enter your Age' required />
+                                    <Input onChange={handleChange} name="age" type='number' placeholder='Enter your Age' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Phone</FormLabel>
-                                    <Input onBlur={handleBlur} name="phone" type='tel' placeholder='Enter your Number' required />
+                                    <Input onChange={handleChange} name="phone" type='tel' placeholder='Enter your Number' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>Address</FormLabel>
-                                    <Input onBlur={handleBlur} name="address" type='text' placeholder='Enter your Address' required />
+                                    <Input onChange={handleChange} name="address" type='text' placeholder='Enter your Address' required />
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>District</FormLabel>
