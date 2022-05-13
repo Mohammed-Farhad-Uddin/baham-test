@@ -8,14 +8,13 @@ import {
     Input,
     Stack,
     Checkbox,
-    Button,
-    InputRightElement
+    Button
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const VARIANT_COLOR = 'teal';
+const COLOR = 'teal';
 
 
 const LoginForm = () => {
@@ -58,7 +57,7 @@ const LoginForm = () => {
     return (
 
         <>
-            <Link to="/customerForm"> <Button align="center" variantColor={VARIANT_COLOR} width='full' mb={4} >Switch to Customer Form</Button> </Link>
+            <Link to="/customerForm"> <Button align="center" variantColor={COLOR} width='full' mb={4} >Switch to Customer Form</Button> </Link>
 
             <Flex minHeight='100vh' width='full' align='center' justifyContent='center'>
                 <Box
@@ -92,10 +91,10 @@ const LoginForm = () => {
                                         <Checkbox required>Remember Me</Checkbox>
                                     </Box>
                                     <Box>
-                                        <Link color={`${VARIANT_COLOR}.500`}>Forgot your password?</Link>
+                                        <Link color={`${COLOR}.500`}>Forgot your password?</Link>
                                     </Box>
                                 </Stack>
-                                <Button type="submit" variantColor={VARIANT_COLOR} width='full' mt={4} disabled={isValid ? true : false} >Sign In</Button>
+                                <Button type="submit" variantColor={COLOR} width='full' mt={4} disabled={isValid ? true : false} >Sign In</Button>
                             </form>
                         </Box>
                     </Box>

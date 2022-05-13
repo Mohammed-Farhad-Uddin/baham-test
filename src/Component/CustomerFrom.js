@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const VARIANT_COLOR = 'teal';
+const COLOR = 'teal';
 
 
 const CustomerFrom = () => {
@@ -61,7 +61,7 @@ const CustomerFrom = () => {
 
     return (
         <>
-            <Link to="/loginForm">   <Button align="center" variantColor={VARIANT_COLOR} width='full' mb={4} >Switch to Login Form</Button> </Link>
+            <Link to="/loginForm">   <Button align="center" variantColor={COLOR} width='full' mb={4} >Switch to Login Form</Button> </Link>
 
             <Flex minHeight='100vh' width='full' align='center' justifyContent='center'>
                 <Box
@@ -97,7 +97,7 @@ const CustomerFrom = () => {
                                 </FormControl>
                                 <FormControl mt={4}>
                                     <FormLabel>District</FormLabel>
-                                    <Select value={district} onChange={(e) => setDistrict(e.target.value)} color={VARIANT_COLOR} placeholder='Select District' required>
+                                    <Select value={district} onChange={(e) => setDistrict(e.target.value)} color={COLOR} placeholder='Select District' required>
                                         <option>Dhaka</option>
                                         <option>Chittagong</option>
                                         <option>Sylhet</option>
@@ -118,7 +118,7 @@ const CustomerFrom = () => {
                                     </Box>
                                 </Stack>
 
-                                <Button type="submit" variantColor={VARIANT_COLOR} width='full' mt={4}>Submit</Button>
+                                <Button type="submit" variantColor={COLOR} width='full' mt={4}>Submit</Button>
                             </form>
                         </Box>
                     </Box>
