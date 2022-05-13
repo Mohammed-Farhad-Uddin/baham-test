@@ -14,7 +14,7 @@ import {
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const COLOR = 'teal';
+const COLOR = 'white';
 
 
 const LoginForm = () => {
@@ -71,13 +71,13 @@ const LoginForm = () => {
                 >
                     <Box p={4}>
                         <Box textAlign='center'>
-                            <Heading>Sign In to Your Account</Heading>
+                            <Heading>Login</Heading>
                         </Box>
                         <Box my={8} textAlign='left'>
                             <form onSubmit={handelLogIn}>
 
                                 <FormControl>
-                                    <FormLabel>Email address</FormLabel>
+                                    <FormLabel>Email Address</FormLabel>
                                     <Input name="email" type='email' placeholder='Enter your email address' onBlur={handleBlur} required />
                                 </FormControl>
 

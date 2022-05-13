@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const COLOR = 'teal';
+const COLOR = 'white';
 
 
 const CustomerFrom = () => {
